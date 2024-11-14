@@ -1,3 +1,17 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
+  "extends": [
+    "next/core-web-vitals",
+    "next/typescript",
+    "eslint-config-dotori-base",
+    "eslint-config-dotori-typescript",
+    "eslint-config-dotori-react",
+    "eslint-config-dotori-import-sort"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "react-refresh/only-export-components": "off"
+  }
 }

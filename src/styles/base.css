@@ -1,0 +1,26 @@
+@layer base {
+  * {
+    line-height: 1.5;
+    box-sizing: border-box;
+  }
+
+  input,
+  textarea {
+    font-size: inherit;
+    text-align: inherit;
+    background-color: inherit;
+    font-weight: inherit;
+    outline: none;
+    cursor: inherit;
+  }
+
+  input[type='checkbox'],
+  input[type='radio'] {
+    appearance: none;
+    position: absolute;
+  }
+
+  input[type='file'] {
+    display: none;
+  }
+}
