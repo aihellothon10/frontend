@@ -1,16 +1,14 @@
 import { cn, VariantProps } from 'dotori-utils';
 
-const Button = ({ children, dropdown, className, ...rest }: ButtonProps) => (
+const Button = ({ children, className, ...rest }: ButtonProps) => (
   <button className={buttonStyle({ className, ...rest })}>
-    <span>{children}</span>
-    {dropdown && <span className="icon-sm">keyboard_arrow_down</span>}
+    <span className="flex items-center justify-center">{children}</span>
   </button>
 );
 
 interface ButtonProps extends VariantProps<typeof buttonStyle> {
-  children: string;
+  children: React.ReactNode;
   className?: string;
-  dropdown?: boolean;
 }
 
 const buttonStyle = cn('px-4 rounded-16 inline-flex justify-center items-center gap-8', {
