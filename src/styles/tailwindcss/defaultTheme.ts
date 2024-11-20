@@ -53,6 +53,14 @@ export const defaultTheme: Config['theme'] = {
       20: 'rgba(231, 214, 255, 1)',
     },
   },
+  gap: {
+    6: '6px',
+    8: '8px',
+    12: '12px',
+    16: '16px',
+    20: '20px',
+    24: '24px',
+  },
   fontFamily: {
     'wanted-sans': ['var(--font-wanted-sans)'],
   },
