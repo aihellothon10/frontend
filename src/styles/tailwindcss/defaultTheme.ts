@@ -64,6 +64,7 @@ export const defaultTheme: Config['theme'] = {
   borderRadius: {
     8: '8px',
     14: '14px',
+    16: '16px',
     20: '20px',
     max: '999px',
   },
