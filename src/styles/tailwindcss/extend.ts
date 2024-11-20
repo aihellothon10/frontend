@@ -17,4 +17,7 @@ export const extend: Config['theme'] = {
   screens: {
     '2lg': '1500px',
   },
+  fontWeight: {
+    regular: '400',
+  },
 };
