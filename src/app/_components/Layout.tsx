@@ -1,4 +1,4 @@
-const Layout = ({ children }: LayoutProps) => <div className="w-mobile m-auto">{children}</div>;
+const Layout = ({ children }: LayoutProps) => <div className="m-auto h-full w-mobile">{children}</div>;
 
 interface LayoutProps {
   children: React.ReactNode;
