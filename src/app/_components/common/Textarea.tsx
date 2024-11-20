@@ -1,9 +1,11 @@
 import { useRef } from 'react';
 
+import { cn } from 'dotori-utils';
+
 import { KEYBOARD } from '@/app/constants';
 import { adjustTextareaHeight } from '@/app/utils';
 
-const Textarea = ({ value, onChange, placeholder, minRows = 1, maxRows, search }: TextareaProps) => {
+const Textarea = ({ value, onChange, placeholder, minRows = 1, maxRows, search, className }: TextareaProps) => {
   const textareaRef = useRef<HTMLTextAreaElement | null>(null);
 
   const handleKeyDown: React.KeyboardEventHandler<HTMLTextAreaElement> = e => {
@@ -19,7 +21,7 @@ const Textarea = ({ value, onChange, placeholder, minRows = 1, maxRows, search }
   };
 
   return (
-    <div className="inline-flex w-full items-center gap-6 rounded-14 px-4">
+    <div className={textareaContainerStyle({ className })}>
       <textarea
         ref={textareaRef}
         className="w-full resize-none rounded-14 py-3"
@@ -41,6 +43,9 @@ interface TextareaProps {
   maxRows: number;
   minRows?: number;
   search?: boolean;
+  className?: string;
 }
+
+const textareaContainerStyle = cn('inline-flex w-full items-center gap-6 rounded-14 px-4');
 
 export default Textarea;
