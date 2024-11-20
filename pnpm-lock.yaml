@@ -14,6 +14,9 @@ importers:
       axios:
         specifier: ^1.7.7
         version: 1.7.7
+      dotori-utils:
+        specifier: ^0.0.20
+        version: 0.0.20(react-dom@19.0.0-rc-7ac8e612-20241113(react@19.0.0-rc-7ac8e612-20241113))(react@19.0.0-rc-7ac8e612-20241113)
       next:
         specifier: 14.2.9
         version: 14.2.9(react-dom@19.0.0-rc-7ac8e612-20241113(react@19.0.0-rc-7ac8e612-20241113))(react@19.0.0-rc-7ac8e612-20241113)
@@ -695,6 +698,13 @@ packages:
   doctrine@3.0.0:
     resolution: {integrity: sha512-yS+Q5i3hBf7GBkd4KG8a7eBNNWNGLTaEwwYWUijIYM7zrlYDM0BFXHjjPWlWZ1Rg7UaddZeIDmi9jF3HmqiQ2w==}
     engines: {node: '>=6.0.0'}
+
+  dotori-utils@0.0.20:
+    resolution: {integrity: sha512-V9k5XKzsE8PERIgb9+lOa8sECpj5Fsr/aQPKq86RWBECrnTpe1bhGGSzDmae86C9RFAoi0E6Xtsg2LGtZyatsA==}
+    engines: {node: '>= 20.15.0'}
+    peerDependencies:
+      react: '>=18.0.0'
+      react-dom: '>=18.0.0'
 
   eastasianwidth@0.2.0:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
@@ -2635,6 +2645,11 @@ snapshots:
   doctrine@3.0.0:
     dependencies:
       esutils: 2.0.3
+
+  dotori-utils@0.0.20(react-dom@19.0.0-rc-7ac8e612-20241113(react@19.0.0-rc-7ac8e612-20241113))(react@19.0.0-rc-7ac8e612-20241113):
+    dependencies:
+      react: 19.0.0-rc-7ac8e612-20241113
+      react-dom: 19.0.0-rc-7ac8e612-20241113(react@19.0.0-rc-7ac8e612-20241113)
 
   eastasianwidth@0.2.0: {}
 
