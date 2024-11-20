@@ -1,7 +1,7 @@
 import { materialSymbolsRoundedIconFont, nanumSquareEBFont, wantedSansFont } from '@/app/config/font';
 import { metadata } from '@/app/config/metadata';
 
-import Layout from './_components/Layout';
+import Layout from './_components/common/Layout';
 
 import '@/styles/globals.css';
 
