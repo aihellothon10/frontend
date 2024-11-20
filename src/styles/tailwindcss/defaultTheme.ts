@@ -61,6 +61,12 @@ export const defaultTheme: Config['theme'] = {
     20: '20px',
     24: '24px',
   },
+  borderRadius: {
+    8: '8px',
+    14: '14px',
+    20: '20px',
+    max: '999px',
+  },
   fontFamily: {
     'wanted-sans': ['var(--font-wanted-sans)'],
   },
