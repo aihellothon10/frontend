@@ -15,5 +15,6 @@ export const extend: Config['theme'] = {
   },
   padding: {
     '4.25': '1.0625rem',
+    'mobile-bottom-navigation-height': '89px',
   },
 };
