@@ -54,7 +54,9 @@ export const defaultTheme: Config['theme'] = {
     },
   },
   gap: {
+    5: '5px',
     6: '6px',
+    7: '7px',
     8: '8px',
     12: '12px',
     16: '16px',
@@ -63,6 +65,7 @@ export const defaultTheme: Config['theme'] = {
   },
   borderRadius: {
     8: '8px',
+    12: '12px',
     14: '14px',
     16: '16px',
     20: '20px',
