@@ -14,7 +14,7 @@ interface ChipProps extends VariantProps<typeof chipStyle> {
   className?: string;
 }
 
-const chipStyle = cn('rounded-max text-grayscale-10 cursor-pointer', {
+const chipStyle = cn('rounded-max text-grayscale-10 cursor-pointer inline-block', {
   variants: {
     color: {
       blue: 'bg-blue-20 text-blue-50',
@@ -25,7 +25,7 @@ const chipStyle = cn('rounded-max text-grayscale-10 cursor-pointer', {
       sm: 'py-1.5 px-2 label-sm-12-medium',
     },
     checked: {
-      true: '!font-regular',
+      true: '',
       false: '',
     },
   },
