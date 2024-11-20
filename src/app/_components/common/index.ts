@@ -6,3 +6,4 @@ export { default as Button } from './Button';
 export { default as FloatingActionButton } from './FloatingActionButton';
 export { default as Switch } from './Switch';
 export { default as Divider } from './Divider';
+export { default as Textarea } from './Textarea';
