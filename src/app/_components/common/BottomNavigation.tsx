@@ -17,7 +17,7 @@ const BottomNavigation = () => {
         {navigations.map(({ label, iconText, path }) => (
           <button
             key={label}
-            className={labelContainerStyle({ current: pathname.includes(path) })}
+            className={labelContainerStyle({ current: `/${pathname.split('/')[1]}` === path })}
             onClick={handleLinkClick(path)}>
             <span className="icon-fill icon-md">{iconText}</span>
             <span className="label-sm-12-medium">{label}</span>
