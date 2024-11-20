@@ -11,6 +11,7 @@ export const extend: Config['theme'] = {
     'mobile-header-bottom': '60px',
     'mobile-bottom-navigation': '89px',
     15: '3.75rem',
+    12.5: '3.125rem',
   },
   fontWeight: {
     regular: '400',
