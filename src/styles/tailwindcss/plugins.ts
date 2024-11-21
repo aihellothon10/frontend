@@ -35,6 +35,9 @@ export const plugins: Config['plugins'] = [
       '.label-sm-12-medium': {
         '@apply font-wanted-sans text-label-sm leading-label-sm font-medium': {},
       },
+      '.label-sm-12-regular': {
+        '@apply font-wanted-sans text-label-sm leading-label-sm font-regular': {},
+      },
       '.icon-fill': {
         'font-variation-settings': '"FILL" 1',
       },
