@@ -12,7 +12,7 @@ interface ButtonProps extends VariantProps<typeof buttonStyle> {
   onClick: React.MouseEventHandler<HTMLButtonElement>;
 }
 
-const buttonStyle = cn('px-4 rounded-16 inline-flex justify-center items-center gap-8', {
+const buttonStyle = cn('px-4 rounded-14 inline-flex justify-center items-center gap-8', {
   variants: {
     color: {
       white: 'bg-grayscale-10 border border-grayscale-30',
