@@ -1,5 +1,4 @@
-import CreateMemoBottomButton from '../CreateMemoBottomButton';
-
+import CreateMemoBottomButton from './CreateMemoBottomButton';
 import CreateMemoLink from './CreateMemoLink';
 import CreateMemoSwitch from './CreateMemoSwitch';
 import CreateMemoTextarea from './CreateMemoTextarea';
