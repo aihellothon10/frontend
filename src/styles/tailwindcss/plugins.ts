@@ -6,10 +6,10 @@ export const plugins: Config['plugins'] = [
   plugin(({ addUtilities }: { addUtilities: PluginAPI['addUtilities'] }) => {
     addUtilities({
       '.title-lg-24-extrabold': {
-        '@apply font-nanum-square-extra-bold text-title-lg leading-title-lg': {},
+        '@apply font-nanum-square-round-extra-bold text-title-lg leading-title-lg': {},
       },
       '.title-md-22-extrabold': {
-        '@apply font-nanum-square-extra-bold text-title-md leading-title-md': {},
+        '@apply font-nanum-square-round-extra-bold text-title-md leading-title-md': {},
       },
       '.body-md-17-medium': {
         '@apply font-wanted-sans text-body-md leading-body-md font-medium': {},

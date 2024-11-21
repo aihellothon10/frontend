@@ -5,9 +5,9 @@ export const wantedSansFont = localFont({
   variable: '--font-wanted-sans',
 });
 
-export const nanumSquareEBFont = localFont({
-  src: '../../assets/fonts/NanumSquareEB.otf',
-  variable: '--font-nanum-square-extra-bold',
+export const nanumSquareRoundEBFont = localFont({
+  src: '../../assets/fonts/NanumSquareRoundEB.otf',
+  variable: '--font-nanum-square-round-extra-bold',
 });
 
 export const materialSymbolsRoundedIconFont = localFont({

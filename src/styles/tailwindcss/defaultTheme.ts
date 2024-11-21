@@ -76,7 +76,7 @@ export const defaultTheme: Config['theme'] = {
   },
   fontFamily: {
     'wanted-sans': ['var(--font-wanted-sans)'],
-    'nanum-square-extra-bold': ['var(--font-nanum-square-extra-bold)'],
+    'nanum-square-round-extra-bold': ['var(--font-nanum-square-round-extra-bold)'],
     'material-symbols-rounded-icon': ['var(--font-material-symbols-rounded-icon)'],
   },
   fontSize: {
