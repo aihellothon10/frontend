@@ -8,7 +8,9 @@ const CreateMemoLink = () => {
   const [linkValues, setLinkValues] = useState<string[]>([]);
   const handleChangeLinkValue = ({ index, newLinkValue }: { index: number; newLinkValue: string }) =>
     setLinkValues(linkValues.map((linkValue, i) => (i === index ? newLinkValue : linkValue)));
+
   const handleAddLinkValue = () => setLinkValues([...linkValues, '']);
+  const handleRemoveLinkValue = (index: number) => setLinkValues(linkValues.filter((_, idx) => idx !== index));
 
   return (
     <CreateMemoSection title="링크" help>
@@ -20,9 +22,7 @@ const CreateMemoLink = () => {
           placeholder="링크를 입력해주세요"
           value={linkValue}
           icon={
-            <button
-              className="text-grayscale-50 icon-sm"
-              onClick={() => handleChangeLinkValue({ index, newLinkValue: '' })}>
+            <button className="text-grayscale-50 icon-sm" onClick={() => handleRemoveLinkValue(index)}>
               close
             </button>
           }
