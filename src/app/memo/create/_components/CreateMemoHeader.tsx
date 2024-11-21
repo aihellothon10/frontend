@@ -9,7 +9,7 @@ const CreateMemoHeader = () => {
 
   return (
     <Header>
-      <div className="flex items-center gap-16 px-6 py-4">
+      <div className="flex w-full items-center gap-16 bg-grayscale-10 px-6 py-4">
         <button className="icon-lg" onClick={() => router.back()}>
           arrow_back
         </button>
