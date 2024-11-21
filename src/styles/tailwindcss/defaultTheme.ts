@@ -65,16 +65,18 @@ export const defaultTheme: Config['theme'] = {
     24: '24px',
   },
   borderRadius: {
+    4: '4px',
     8: '8px',
     12: '12px',
     14: '14px',
     16: '16px',
     20: '20px',
+    76: '76px',
     max: '999px',
   },
   fontFamily: {
     'wanted-sans': ['var(--font-wanted-sans)'],
-    'nanum-square-extra-bold': ['var(--font-nanum-square-extra-bold)'],
+    'nanum-square-round-extra-bold': ['var(--font-nanum-square-round-extra-bold)'],
     'material-symbols-rounded-icon': ['var(--font-material-symbols-rounded-icon)'],
   },
   fontSize: {
