@@ -3,6 +3,8 @@
 import { cn } from 'dotori-utils';
 import { usePathname, useRouter } from 'next/navigation';
 
+import { PATH } from '@/app/constants';
+
 const BottomNavigation = () => {
   const router = useRouter();
   const pathname = usePathname();
@@ -29,10 +31,10 @@ const BottomNavigation = () => {
 };
 
 const navigations = [
-  { label: '홈', iconText: 'home', path: '/' },
-  { label: '메모', iconText: 'description', path: '/memo' },
-  { label: '가족', iconText: 'diversity_4', path: '/family' },
-  { label: '나', iconText: 'account_circle', path: '/me' },
+  { label: '홈', iconText: 'home', path: PATH.HOME },
+  { label: '메모', iconText: 'description', path: PATH.MEMO },
+  { label: '가족', iconText: 'diversity_4', path: PATH.FAMILY },
+  { label: '나', iconText: 'account_circle', path: PATH.ME },
 ];
 
 const labelContainerStyle = cn('flex flex-col items-center py-3 px-7 hover:bg-grayscale-20', {
