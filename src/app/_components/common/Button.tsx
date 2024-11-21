@@ -2,7 +2,7 @@ import { cn, VariantProps } from 'dotori-utils';
 
 const Button = ({ children, className, onClick, ...rest }: ButtonProps) => (
   <button className={buttonStyle({ className, ...rest })} onClick={onClick}>
-    <span className="flex items-center justify-center">{children}</span>
+    {children}
   </button>
 );
 
@@ -16,6 +16,7 @@ const buttonStyle = cn('px-4 rounded-14 inline-flex justify-center items-center 
   variants: {
     color: {
       white: 'bg-grayscale-10 border border-grayscale-30',
+      gray: 'bg-grayscale-30 text-grayscale-60',
       blue: 'bg-blue-50 text-grayscale-10',
       red: 'bg-red-50 text-grayscale-10',
     },
