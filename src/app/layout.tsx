@@ -6,7 +6,7 @@ import Layout from './_components/common/Layout';
 import '@/styles/globals.css';
 
 const RootLayout = ({ children }: RootLayoutProps) => (
-  <html className="h-svh" lang="ko">
+  <html className="min-h-svh" lang="ko">
     <body
       className={`${wantedSansFont.className} ${nanumSquareEBFont.variable} ${materialSymbolsRoundedIconFont.variable} h-full`}>
       <Layout>{children}</Layout>

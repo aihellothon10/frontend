@@ -1,11 +1,9 @@
 import BottomNavigation from './BottomNavigation';
 
 const Layout = ({ children }: LayoutProps) => (
-  <div className="m-auto h-full w-mobile">
+  <div className="m-auto min-h-svh w-mobile bg-grayscale-20 pb-mobile-bottom-navigation-height">
     {children}
-    <div className="pb-mobile-bottom-navigation-height">
-      <BottomNavigation />
-    </div>
+    <BottomNavigation />
   </div>
 );
 
