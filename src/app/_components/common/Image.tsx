@@ -15,6 +15,6 @@ interface ImageProps extends Omit<React.ComponentProps<typeof NextImage>, 'width
 
 const ImageContainerStyle = cn('relative');
 
-const ImageStyle = cn('object-cover');
+const ImageStyle = cn('object-cover rounded-inherit');
 
 export default Image;

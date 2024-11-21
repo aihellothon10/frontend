@@ -73,6 +73,7 @@ export const defaultTheme: Config['theme'] = {
     20: '20px',
     76: '76px',
     max: '999px',
+    inherit: 'inherit',
   },
   fontFamily: {
     'wanted-sans': ['var(--font-wanted-sans)'],
