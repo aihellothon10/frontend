@@ -16,7 +16,7 @@ const checkboxContainerStyle = cn('inline-flex items-center justify-center round
   variants: {
     checked: {
       true: 'border border-transparent bg-blue-50 text-grayscale-10',
-      false: 'border border-grayscale-40',
+      false: 'border border-grayscale-40 bg-inherit',
     },
   },
   defaultVariants: {
