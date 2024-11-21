@@ -1,19 +1,29 @@
 'use client';
 
+import { useRouter } from 'next/navigation';
+
+import { FloatingActionButton } from '@/app/_components/common';
+import { PATH } from '@/app/constants';
+
 import { MemoCards, MemoHeader, MemoInput } from './_components';
 import CoreMemo from './_components/CoreMemo';
 import MemoChips from './_components/MemoChips/MemoChips';
 
-const Memo = () => (
-  <div className="h-full px-4 pb-4">
-    <MemoHeader />
-    <MemoInput />
-    <MemoChips />
-    <div className="mt-4 rounded-12 bg-grayscale-10 p-3">
-      <CoreMemo />
-      <MemoCards />
+const Memo = () => {
+  const router = useRouter();
+
+  return (
+    <div className="relative h-full px-4 pb-4">
+      <MemoHeader />
+      <MemoInput />
+      <MemoChips />
+      <div className="mt-4 rounded-12 bg-grayscale-10 p-3">
+        <CoreMemo />
+        <MemoCards />
+      </div>
+      <FloatingActionButton onClick={() => router.push(PATH.MEMO_CREATE)} />
     </div>
-  </div>
-);
+  );
+};
 
 export default Memo;
