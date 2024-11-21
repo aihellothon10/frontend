@@ -1,7 +1,7 @@
-import Image from 'next/image';
+import { Image } from '@/app/_components/common';
 
 const MemoCard = ({ isError, liked }: MemoCardProps) => (
-  <div className="label-sm-12-regular flex justify-between p-4">
+  <div className="flex justify-between p-4 label-sm-12-regular">
     <div className="flex flex-col gap-5 text-grayscale-60">
       <p className="flex items-center gap-6">
         {liked && (
@@ -27,9 +27,13 @@ const MemoCard = ({ isError, liked }: MemoCardProps) => (
         <span>메모 내용 요약된 텍스트 한 줄</span>
       </p>
     </div>
-    <div className="relative h-11 w-11 border border-grayscale-30">
-      <Image alt="image" className="object-cover" sizes="11rem" src="/images/baby_mock.png" fill />
-    </div>
+    <Image
+      alt="thumbnail"
+      className="rounded-8 border border-grayscale-30"
+      containerClassName="w-13 h-13"
+      sizes="3.25rem"
+      src="/images/baby_mock.png"
+    />
   </div>
 );
 
