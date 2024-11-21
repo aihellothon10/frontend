@@ -8,10 +8,10 @@ const MemoInput = () => {
   return (
     <Textarea
       className="bg-grayscale-10"
+      icon={<span className="icon-sm">search</span>}
       maxRows={2}
       placeholder="메모 검색"
       value={state}
-      search
       onChange={setState}
     />
   );
