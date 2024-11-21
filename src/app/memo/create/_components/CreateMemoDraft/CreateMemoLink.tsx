@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 import { Button, Textarea } from '@/app/_components/common';
 
-import MemoSection from './MemoSection';
+import CreateMemoSection from '../CreateMemoSection';
 
 const CreateMemoLink = () => {
   const [linkValues, setLinkValues] = useState<string[]>([]);
@@ -11,7 +11,7 @@ const CreateMemoLink = () => {
   const handleAddLinkValue = () => setLinkValues([...linkValues, '']);
 
   return (
-    <MemoSection title="링크" help>
+    <CreateMemoSection title="링크" help>
       {linkValues.map((linkValue, index) => (
         <Textarea
           key={index}
@@ -33,7 +33,7 @@ const CreateMemoLink = () => {
         <span>링크 추가하기</span>
         <span className="icon-sm">add</span>
       </Button>
-    </MemoSection>
+    </CreateMemoSection>
   );
 };
 

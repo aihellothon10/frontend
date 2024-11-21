@@ -2,14 +2,14 @@ import { useState } from 'react';
 
 import { Textarea } from '@/app/_components/common';
 
-import MemoSection from './MemoSection';
+import CreateMemoSection from '../CreateMemoSection';
 
 const CreateMemoTextarea = () => {
   const [value, setValue] = useState('');
   const handleChangeValue = (newValue: string) => setValue(newValue);
 
   return (
-    <MemoSection title="메모 내용">
+    <CreateMemoSection title="메모 내용">
       <Textarea
         className="bg-grayscale-20"
         maxRows={9999}
@@ -18,7 +18,7 @@ const CreateMemoTextarea = () => {
         value={value}
         onChange={handleChangeValue}
       />
-    </MemoSection>
+    </CreateMemoSection>
   );
 };
 

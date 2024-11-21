@@ -1,9 +1,9 @@
 import { Button, Image } from '@/app/_components/common';
 
-import MemoSection from './MemoSection';
+import CreateMemoSection from '../CreateMemoSection';
 
 const CreateMemoUpload = () => (
-  <MemoSection title="사진">
+  <CreateMemoSection title="사진">
     <div className="flex gap-8">
       <Image
         alt="thumbnail"
@@ -20,14 +20,14 @@ const CreateMemoUpload = () => (
         src="/images/baby2_mock.png"
       />
       <div>
-        <Button className="w-18 h-18 p-0" fullWidth={false} onClick={() => {}}>
+        <Button className="h-18 w-18 p-0" fullWidth={false} onClick={() => {}}>
           <span className="inline-flex items-center justify-center text-grayscale-50 icon-fill icon-lg">
             add_photo_alternate
           </span>
         </Button>
       </div>
     </div>
-  </MemoSection>
+  </CreateMemoSection>
 );
 
 export default CreateMemoUpload;
