@@ -8,7 +8,7 @@ import '@/styles/globals.css';
 const RootLayout = ({ children }: RootLayoutProps) => (
   <html className="min-h-svh" lang="ko">
     <body
-      className={`${wantedSansFont.className} ${nanumSquareEBFont.variable} ${materialSymbolsRoundedIconFont.variable} h-full`}>
+      className={`${wantedSansFont.className} ${nanumSquareEBFont.variable} ${materialSymbolsRoundedIconFont.variable} h-full scrollbar-hide`}>
       <Layout>{children}</Layout>
     </body>
   </html>
