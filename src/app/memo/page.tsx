@@ -5,7 +5,7 @@ import CoreMemo from './_components/CoreMemo';
 import MemoChips from './_components/MemoChips/MemoChips';
 
 const Memo = () => (
-  <div className="bg-grayscale-20 p-4">
+  <div className="bg-grayscale-20 px-4 pb-4">
     <MemoHeader />
     <MemoInput />
     <MemoChips />
