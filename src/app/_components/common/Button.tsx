@@ -1,7 +1,7 @@
 import { cn, VariantProps } from 'dotori-utils';
 
-const Button = ({ children, className, ...rest }: ButtonProps) => (
-  <button className={buttonStyle({ className, ...rest })}>
+const Button = ({ children, className, onClick, ...rest }: ButtonProps) => (
+  <button className={buttonStyle({ className, ...rest })} onClick={onClick}>
     <span className="flex items-center justify-center">{children}</span>
   </button>
 );
@@ -9,6 +9,7 @@ const Button = ({ children, className, ...rest }: ButtonProps) => (
 interface ButtonProps extends VariantProps<typeof buttonStyle> {
   children: React.ReactNode;
   className?: string;
+  onClick: React.MouseEventHandler<HTMLButtonElement>;
 }
 
 const buttonStyle = cn('px-4 rounded-16 inline-flex justify-center items-center gap-8', {
