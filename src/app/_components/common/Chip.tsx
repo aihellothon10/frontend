@@ -2,7 +2,7 @@ import { cn, VariantProps } from 'dotori-utils';
 
 const Chip = ({ checked, onChange, children, className, ...rest }: ChipProps) => (
   <label className={chipStyle({ className, checked, ...rest })}>
-    <input checked={checked} type="checkbox" onChange={onChange} />
+    <input checked={checked} className="hidden" type="checkbox" onChange={onChange} />
     {children}
   </label>
 );
