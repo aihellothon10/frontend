@@ -1,17 +1,16 @@
 'use client';
 
-import { CreateMemoStepper } from './_components';
+import { CreateMemoContent, CreateMemoStepper } from './_components';
 import CreateMemoHeader from './_components/CreateMemoHeader';
 
-const CreateMemo = () => {
-  console.log();
-
-  return (
+const CreateMemo = () => (
+  <>
+    <CreateMemoHeader />
     <div className="bg-grayscale-10">
-      <CreateMemoHeader />
       <CreateMemoStepper />
+      <CreateMemoContent />
     </div>
-  );
-};
+  </>
+);
 
 export default CreateMemo;

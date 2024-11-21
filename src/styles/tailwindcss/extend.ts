@@ -10,15 +10,19 @@ export const extend: Config['theme'] = {
   },
   width: {
     mobile: '375px',
+    13: '3.25rem',
     15: '3.75rem',
+    18: '4.5rem',
   },
   height: {
     'mobile-header': '117px',
     'mobile-header-top': '54px',
     'mobile-header-bottom': '60px',
     'mobile-bottom-navigation': HEIGHT.MOBILE_BOTTOM_NAVIGATION,
-    15: '3.75rem',
     12.5: '3.125rem',
+    13: '3.25rem',
+    15: '3.75rem',
+    18: '4.5rem',
   },
   fontWeight: {
     regular: '400',
