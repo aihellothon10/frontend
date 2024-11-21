@@ -29,8 +29,8 @@ const MemoCard = ({ isError, liked }: MemoCardProps) => (
     </div>
     <Image
       alt="thumbnail"
-      className="rounded-8 border border-grayscale-30"
-      containerClassName="w-13 h-13"
+      className="border border-grayscale-30"
+      containerClassName="w-13 h-13 rounded-8"
       sizes="3.25rem"
       src="/images/baby_mock.png"
     />

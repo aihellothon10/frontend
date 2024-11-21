@@ -7,15 +7,15 @@ const CreateMemoUpload = () => (
     <div className="flex gap-8">
       <Image
         alt="thumbnail"
-        className="rounded-14 border border-grayscale-30"
-        containerClassName="w-18 h-18"
+        className="border border-grayscale-30"
+        containerClassName="w-18 h-18 rounded-14"
         sizes="4.5rem"
         src="/images/baby1_mock.png"
       />
       <Image
         alt="thumbnail"
-        className="rounded-14 border border-grayscale-30"
-        containerClassName="w-18 h-18"
+        className="border border-grayscale-30"
+        containerClassName="w-18 h-18 rounded-14"
         sizes="4.5rem"
         src="/images/baby2_mock.png"
       />
