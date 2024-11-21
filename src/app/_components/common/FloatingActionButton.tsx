@@ -22,7 +22,7 @@ const floatingActionButtonStyle = cn(
         blue: 'bg-blue-50',
       },
       positionX: {
-        right: 'right-[calc(theme(width.mobile)-theme(width.15))]',
+        right: 'right-[calc(50%-theme(width.mobile)/2+theme(width.15))] translate-x-1/2',
       },
       positionY: {
         bottom: 'bottom-4',
