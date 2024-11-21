@@ -14,7 +14,7 @@ const BottomNavigation = () => {
   };
 
   return (
-    <footer className="fixed bottom-0 h-mobile-bottom-navigation w-mobile bg-grayscale-10">
+    <footer className="fixed bottom-0 left-0 right-0 mx-auto h-mobile-bottom-navigation w-mobile bg-grayscale-10">
       <div className="flex justify-center">
         {navigations.map(({ label, iconText, path }) => (
           <button

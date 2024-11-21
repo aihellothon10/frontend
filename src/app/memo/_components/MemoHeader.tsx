@@ -2,7 +2,7 @@ import { Header } from '@/app/_components/common';
 
 const MemoHeader = () => (
   <Header>
-    <div className="flex items-center gap-8">
+    <div className="flex items-center gap-8 px-6 py-4.25">
       <span className="icon-fill icon-md">description</span>
       <span className="title-md-22-extrabold">메모</span>
     </div>

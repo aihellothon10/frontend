@@ -1,7 +1,7 @@
 const Header = ({ children }: HeaderProps) => (
   <header className="sticky top-0 z-10 bg-grayscale-20 text-grayscale-60">
     {/* <div className="h-mobile-header-top"></div> */}
-    <div className="flex items-center justify-between px-2 py-4">{children}</div>
+    <div className="flex items-center justify-between">{children}</div>
   </header>
 );
 
