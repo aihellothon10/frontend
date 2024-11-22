@@ -1,24 +1,33 @@
 'use client';
 
-import { useRouter } from 'next/navigation';
+import { useEffect } from 'react';
+
+import { usePathname, useRouter } from 'next/navigation';
 
 import { Button, Footer } from '@/app/_components/common';
 import { PATH } from '@/app/constants';
 import { useMemoStepStore } from '@/app/store';
+import { sleep } from '@/app/utils';
 
 const CreateMemoBottomButtons = () => {
   const { resetStep } = useMemoStepStore();
   const router = useRouter();
+  const pathname = usePathname();
   const memoItem = `${PATH.MEMO}/1`;
 
-  const handleInvisibleMemoSaveClick = () => {
+  const handleInvisibleMemoSaveClick = async () => {
+    await sleep(1000);
     router.push(memoItem);
   };
 
-  const handleVisibleMemoSaveClick = () => {
+  const handleVisibleMemoSaveClick = async () => {
+    await sleep(1000);
     router.push(memoItem);
-    resetStep();
   };
+
+  useEffect(() => {
+    if (pathname !== PATH.MEMO_CREATE) resetStep();
+  }, [pathname, resetStep]);
 
   return (
     <Footer>
