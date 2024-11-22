@@ -71,6 +71,7 @@ export const defaultTheme: Config['theme'] = {
     14: '14px',
     16: '16px',
     20: '20px',
+    28: '28px',
     76: '76px',
     max: '999px',
     inherit: 'inherit',

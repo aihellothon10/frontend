@@ -1,4 +1,5 @@
 import { MemoHeader, MemoNote } from './_components';
+import MemoBottomFooter from './_components/MemoBottomFooter';
 
 const Memo = () => {
   console.log('asdasd');
@@ -7,6 +8,7 @@ const Memo = () => {
     <>
       <MemoHeader />
       <MemoNote />
+      <MemoBottomFooter />
     </>
   );
 };
