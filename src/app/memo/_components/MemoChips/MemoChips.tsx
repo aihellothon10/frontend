@@ -4,11 +4,12 @@ import { useHorizontalScroll } from '@/app/hooks/common';
 
 import MemoChip from './MemoChip';
 
-const MemoChips = () => {
+const MemoChips = ({ onChange }: MemoChipsProps) => {
   const [filter, setFilter] = useState<Set<string>>(new Set());
   const { containerRef, onDragStart, onDragMove, onDragEnd } = useHorizontalScroll();
 
   const handleChipChange = (item: string) => {
+    onChange(item);
     setFilter(prev => {
       const current = new Set(prev);
 
@@ -37,6 +38,10 @@ const MemoChips = () => {
     </>
   );
 };
+
+interface MemoChipsProps {
+  onChange: (value: string) => void;
+}
 
 const items = ['아이1', '아이2', '병원', '약', '교육1', '교육2'];
 
