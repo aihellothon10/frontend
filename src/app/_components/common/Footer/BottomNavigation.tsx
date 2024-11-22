@@ -37,7 +37,7 @@ const navigations = [
   { label: '나', iconText: 'account_circle', path: PATH.ME },
 ];
 
-const labelContainerStyle = cn('flex flex-col items-center py-3 px-7 hover:bg-grayscale-20', {
+const labelContainerStyle = cn('flex flex-col items-center py-3 px-7', {
   variants: {
     current: {
       true: 'text-blue-50',
