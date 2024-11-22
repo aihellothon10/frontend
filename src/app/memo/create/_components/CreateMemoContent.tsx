@@ -1,3 +1,5 @@
+'use client';
+
 import { useMemoStepStore } from '@/app/store';
 
 import CreateMemoDraft from './CreateMemoDraft/CreateMemoDraft';

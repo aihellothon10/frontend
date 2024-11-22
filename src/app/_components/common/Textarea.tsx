@@ -1,3 +1,5 @@
+'use client';
+
 import { useRef } from 'react';
 
 import { cn } from 'dotori-utils';

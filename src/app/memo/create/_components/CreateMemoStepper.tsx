@@ -1,3 +1,5 @@
+'use client';
+
 import { cn } from 'dotori-utils';
 
 import { Chip, Divider } from '@/app/_components/common';
@@ -12,12 +14,11 @@ const CreateMemoStepper = () => {
         <button key={step} className="flex flex-1 flex-col justify-center gap-8" onClick={() => updateStep(step)}>
           <div className={stepBoxStyle({ current: step <= currentStep })}>
             <Chip
+              className="cursor-pointer"
               color={step <= currentStep ? 'blue' : 'gray'}
               size="sm"
-              type="checkbox"
-              variant="outline"
-              checked
-              onChange={() => {}}>
+              type="solid"
+              variant="outline">
               {step}단계
             </Chip>
             <span className={stepLabelStyle({ current: step <= currentStep })}>{label}</span>

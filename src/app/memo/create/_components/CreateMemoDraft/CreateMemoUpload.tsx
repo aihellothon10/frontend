@@ -1,3 +1,5 @@
+'use client';
+
 import { Image } from '@/app/_components/common';
 import { useFileReader } from '@/app/hooks/common';
 

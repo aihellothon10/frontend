@@ -1,3 +1,5 @@
+'use client';
+
 import { useState } from 'react';
 
 import { Checkbox, Image, Button } from '@/app/_components/common';
