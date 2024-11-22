@@ -1,4 +1,4 @@
-import MemoHeader from './_components/MemoHeader';
+import { MemoHeader, MemoNote } from './_components';
 
 const Memo = () => {
   console.log('asdasd');
@@ -6,6 +6,7 @@ const Memo = () => {
   return (
     <>
       <MemoHeader />
+      <MemoNote />
     </>
   );
 };
