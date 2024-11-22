@@ -2,7 +2,7 @@ import { Suspense } from 'react';
 
 import { CreateMemoContent, CreateMemoStepper } from './_components';
 import CreateMemoHeader from './_components/CreateMemoHeader';
-import Loading from './loading';
+import Loading from './_components/Loading';
 
 const CreateMemo = () => (
   <>
