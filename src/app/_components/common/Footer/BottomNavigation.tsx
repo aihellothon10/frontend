@@ -16,7 +16,7 @@ const BottomNavigation = () => {
   };
 
   return (
-    <Footer>
+    <Footer className="flex items-center justify-center">
       {navigations.map(({ label, iconText, path }) => (
         <button
           key={label}
