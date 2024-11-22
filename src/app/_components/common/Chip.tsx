@@ -1,21 +1,35 @@
 import { cn, VariantProps } from 'dotori-utils';
 
-const Chip = ({ checked, onChange, children, className, ...rest }: ChipProps) => (
-  <label className={chipStyle({ className, checked, ...rest })}>
-    <input checked={checked} className="hidden" type="checkbox" onChange={onChange} />
+const Chip = <Type extends 'checkbox' | 'solid'>({
+  type,
+  checked,
+  onChange,
+  children,
+  className,
+  ...rest
+}: Type extends 'checkbox'
+  ? ChipProps<Type>
+  : Omit<ChipProps<Type>, 'checked' | 'onChange'> & Pick<Partial<ChipProps<Type>>, 'checked' | 'onChange'>) => (
+  <label className={chipStyle({ className, checked, type, ...rest })}>
+    {type === 'checkbox' && <input checked={checked} className="hidden" type="checkbox" onChange={onChange} />}
     {children}
   </label>
 );
 
-interface ChipProps extends VariantProps<typeof chipStyle> {
-  checked: boolean;
-  onChange: React.ChangeEventHandler<HTMLInputElement>;
+interface ChipProps<Type> extends Omit<VariantProps<typeof chipStyle>, 'type'> {
+  checked: Type extends 'checkbox' ? boolean : never;
+  onChange: Type extends 'checkbox' ? React.ChangeEventHandler<HTMLInputElement> : never;
   children: React.ReactNode;
   className?: string;
+  type: Type;
 }
 
-const chipStyle = cn('rounded-max text-grayscale-10 cursor-pointer inline-block', {
+const chipStyle = cn('rounded-max text-grayscale-10 inline-block', {
   variants: {
+    type: {
+      checkbox: 'cursor-pointer',
+      solid: '',
+    },
     variant: {
       outline: '',
       filled: '',

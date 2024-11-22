@@ -11,7 +11,13 @@ const CreateMemoStepper = () => {
       {steps.map(({ label, step }) => (
         <button key={step} className="flex flex-1 flex-col justify-center gap-8" onClick={() => updateStep(step)}>
           <div className={stepBoxStyle({ current: step <= currentStep })}>
-            <Chip color={step <= currentStep ? 'blue' : 'gray'} size="sm" variant="outline" checked onChange={() => {}}>
+            <Chip
+              color={step <= currentStep ? 'blue' : 'gray'}
+              size="sm"
+              type="checkbox"
+              variant="outline"
+              checked
+              onChange={() => {}}>
               {step}단계
             </Chip>
             <span className={stepLabelStyle({ current: step <= currentStep })}>{label}</span>

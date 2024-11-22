@@ -2,7 +2,7 @@ import { Chip } from '@/app/_components/common';
 
 const MemoChip = ({ item, filter, onChange }: MemoChipProps) => (
   <>
-    <Chip checked={filter.has(item)} onChange={() => onChange(item)}>
+    <Chip checked={filter.has(item)} type="checkbox" onChange={() => onChange(item)}>
       {item}
     </Chip>
   </>
