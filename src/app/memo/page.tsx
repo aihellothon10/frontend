@@ -22,7 +22,7 @@ const Memo = () => {
   return (
     <>
       <MemoHeader />
-      <div className="relative h-full bg-grayscale-20 px-4 pb-4">
+      <div className="relative h-full flex-1 bg-grayscale-20 px-4 pb-4">
         <MemoInput />
         <MemoChips />
         <div className="mt-4 rounded-20 bg-grayscale-10 p-3">

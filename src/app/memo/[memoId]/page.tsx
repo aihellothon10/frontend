@@ -4,7 +4,9 @@ import MemoBottomFooter from './_components/MemoBottomFooter';
 const Memo = () => (
   <>
     <MemoHeader />
-    <MemoNote />
+    <div className="h-full flex-1">
+      <MemoNote />
+    </div>
     <MemoBottomFooter />
   </>
 );

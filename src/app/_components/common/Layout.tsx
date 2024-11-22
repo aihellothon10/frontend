@@ -1,5 +1,5 @@
 const Layout = ({ children }: LayoutProps) => (
-  <div className="m-auto min-h-svh w-mobile pb-mobile-bottom-navigation-height">{children}</div>
+  <div className="m-auto flex min-h-svh w-mobile flex-col pb-mobile-bottom-navigation-height">{children}</div>
 );
 
 interface LayoutProps {
