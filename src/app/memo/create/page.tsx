@@ -1,14 +1,17 @@
-'use client';
+import { Suspense } from 'react';
 
 import { CreateMemoContent, CreateMemoStepper } from './_components';
 import CreateMemoHeader from './_components/CreateMemoHeader';
+import Loading from './loading';
 
 const CreateMemo = () => (
   <>
     <CreateMemoHeader />
-    <div className="bg-grayscale-10">
-      <CreateMemoStepper />
-      <CreateMemoContent />
+    <div className="h-full bg-grayscale-10">
+      <Suspense fallback={<Loading />}>
+        <CreateMemoStepper />
+        <CreateMemoContent />
+      </Suspense>
     </div>
   </>
 );
