@@ -6,9 +6,13 @@ interface State {
 
 interface Action {
   updateStep: (step: State['step']) => void;
+  resetStep: () => void;
 }
 
+const STEP = 1;
+
 export const useMemoStepStore = create<State & Action>()(set => ({
-  step: 1,
+  step: STEP,
   updateStep: (step: State['step']) => set(() => ({ step })),
+  resetStep: () => set(() => ({ step: STEP })),
 }));
