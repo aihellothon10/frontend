@@ -4,6 +4,7 @@ import { useRouter } from 'next/navigation';
 
 import { BottomNavigation, FloatingActionButton } from '@/app/_components/common';
 import { PATH } from '@/app/constants';
+import { useMemoStepStore } from '@/app/store';
 
 import { MemoCards, MemoHeader, MemoInput } from './_components';
 import CoreMemo from './_components/CoreMemo';
@@ -11,6 +12,12 @@ import MemoChips from './_components/MemoChips/MemoChips';
 
 const Memo = () => {
   const router = useRouter();
+  const { resetStep } = useMemoStepStore();
+
+  const handleAddMemoClick = () => {
+    router.push(PATH.MEMO_CREATE);
+    resetStep();
+  };
 
   return (
     <>
@@ -22,7 +29,7 @@ const Memo = () => {
           <CoreMemo />
           <MemoCards />
         </div>
-        <FloatingActionButton onClick={() => router.push(PATH.MEMO_CREATE)} />
+        <FloatingActionButton onClick={handleAddMemoClick} />
       </div>
       <BottomNavigation />
     </>
