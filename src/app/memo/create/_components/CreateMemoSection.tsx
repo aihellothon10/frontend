@@ -16,8 +16,8 @@ const CreateMemoSection = ({
   return (
     <>
       <div className="flex flex-col gap-8 label-md-14-regular">
-        <div className="flex justify-between gap-6">
-          <div>
+        <div className="flex justify-between">
+          <div className="flex gap-6">
             <div className="text-grayscale-60">{title}</div>
             {help && (
               <button className="text-grayscale-50 icon-xs" onClick={open}>
@@ -25,9 +25,11 @@ const CreateMemoSection = ({
               </button>
             )}
           </div>
-          <button className="cursor-pointer text-blue-50 underline" onClick={open}>
-            {link}
-          </button>
+          {link && (
+            <button className="cursor-pointer text-blue-50 underline" onClick={open}>
+              {link}
+            </button>
+          )}
         </div>
         {children}
       </div>
