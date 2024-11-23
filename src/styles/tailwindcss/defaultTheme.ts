@@ -24,7 +24,7 @@ export const defaultTheme: Config['theme'] = {
       '50-translucence': 'rgba(139, 150, 173, 0.20000000298023224)',
     },
     red: {
-      50: 'rgba(255, 51, 51, 1)',
+      50: 'rgba(236, 60, 60, 1)',
       40: 'rgba(255, 77, 77, 1)',
     },
     orange: {
