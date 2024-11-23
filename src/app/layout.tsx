@@ -10,6 +10,7 @@ const RootLayout = ({ children }: RootLayoutProps) => (
     <body
       className={`${wantedSansFont.className} ${nanumSquareRoundEBFont.variable} ${materialSymbolsRoundedIconFont.variable} h-full scrollbar-hide`}>
       <Layout>{children}</Layout>
+      <div id="modal" />
     </body>
   </html>
 );

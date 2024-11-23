@@ -1,9 +1,10 @@
-import { Portal } from 'dotori-components';
-import { useCreateElement, useOutSideClick } from 'dotori-hooks';
+'use client';
+
+import { Portal } from '@/app/_components/common';
+import { useOutSideClick } from '@/app/hooks/common';
 
 const Modal = ({ children, close, isOpen }: ModalProps) => {
   const ref = useOutSideClick<HTMLDivElement>(close);
-  useCreateElement({ tagName: 'div', attributes: { id: 'modal' } });
 
   return (
     isOpen && (

@@ -1,3 +1,5 @@
+'use client';
+
 import { cn } from 'dotori-utils';
 
 const Footer = ({ children, className }: FooterProps) => (

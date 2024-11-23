@@ -1,3 +1,5 @@
+'use client';
+
 import { cn } from 'dotori-utils';
 
 import Button from './Button';

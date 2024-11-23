@@ -1,3 +1,5 @@
+'use client';
+
 import { cn, VariantProps } from 'dotori-utils';
 
 const BabyStatusBar = ({ value, total, color }: BabyStatusBarProps) => {

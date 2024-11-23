@@ -11,3 +11,4 @@ export { default as Textarea } from './Textarea';
 export { default as Image } from './Image';
 export { default as Checkbox } from './Checkbox';
 export { default as Modal } from './Modal';
+export { default as Portal } from './Portal';

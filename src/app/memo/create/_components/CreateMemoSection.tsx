@@ -1,8 +1,7 @@
 'use client';
 
-import { useDisClosure } from 'dotori-hooks';
-
 import { Modal } from '@/app/_components/common';
+import { useDisClosure } from '@/app/hooks/common';
 
 const CreateMemoSection = ({
   title,
