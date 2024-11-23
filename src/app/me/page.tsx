@@ -1,3 +1,5 @@
+'use client';
+
 import { BottomNavigation } from '../_components/common';
 
 const page = () => (
