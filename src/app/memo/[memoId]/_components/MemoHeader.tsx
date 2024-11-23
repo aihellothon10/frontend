@@ -10,8 +10,8 @@ const MemoHeader = () => {
 
   return (
     <Header>
-      <div className="flex w-full items-center justify-between px-6 py-4">
-        <div className="flex items-center gap-16 bg-grayscale-10">
+      <div className="flex w-full items-center justify-between bg-grayscale-10 px-6 py-4">
+        <div className="flex items-center gap-16">
           <button className="icon-lg" onClick={() => router.push(PATH.MEMO)}>
             arrow_back
           </button>
