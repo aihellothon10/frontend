@@ -10,6 +10,7 @@ export const extend: Config['theme'] = {
   },
   width: {
     mobile: '375px',
+    12.5: '3.125rem',
     13: '3.25rem',
     15: '3.75rem',
     18: '4.5rem',
@@ -36,5 +37,8 @@ export const extend: Config['theme'] = {
   },
   margin: {
     'mobile-bottom-navigation-height': HEIGHT.MOBILE_BOTTOM_NAVIGATION,
+  },
+  borderWidth: {
+    3: '3px',
   },
 };
