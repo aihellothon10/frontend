@@ -14,11 +14,11 @@ const CoreMemo = ({ filters, onChange }: CoreMemoProps) => {
 
   return (
     <div className="flex gap-8">
-      {cores.map(({ label, id }) => (
+      {cores.map(({ label, id, icon }) => (
         <Button key={id} className={buttonStyle({ checked: filters[id] })} onClick={() => handleCheckedChange(id)}>
           <span className="inline-flex items-center gap-6">
             <span className={buttonTextStyle({ checked: filters[id] })}>{label}</span>
-            <span className={starIconStyle({ checked: filters[id] })}>star</span>
+            <span className={starIconStyle({ checked: filters[id] })}>{icon}</span>
           </span>
         </Button>
       ))}
@@ -32,8 +32,8 @@ interface CoreMemoProps {
 }
 
 const cores = [
-  { label: '즐겨찾는 메모', id: 'liked' },
-  { label: '숨겨진 메모', id: 'invisible' },
+  { label: '즐겨찾는 메모', id: 'liked', icon: 'star' },
+  { label: '숨겨진 메모', id: 'invisible', icon: 'lock' },
 ] as const;
 
 const buttonStyle = cn('py-3', {
