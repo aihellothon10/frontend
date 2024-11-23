@@ -5,28 +5,30 @@ const MemoNoteBody = () => {
   const { containerRef, onDragStart, onDragMove, onDragEnd } = useHorizontalScroll();
 
   return (
-    <div>
-      <div>
-        <div
-          ref={containerRef}
-          className="flex gap-8 overflow-hidden text-nowrap"
-          role="button"
-          tabIndex={0}
-          onMouseDown={onDragStart}
-          onMouseLeave={onDragEnd}
-          onMouseMove={onDragMove}
-          onMouseUp={onDragEnd}>
-          <Image alt="user image" containerClassName="w-52 h-36 rounded-8 flex-shrink-0" src="/images/baby_mock.png" />
-          <Image alt="user image" containerClassName="w-52 h-36 rounded-8 flex-shrink-0" src="/images/baby_mock.png" />
+    <>
+      <div
+        ref={containerRef}
+        className="flex gap-8 overflow-hidden text-nowrap"
+        role="button"
+        tabIndex={0}
+        onMouseDown={onDragStart}
+        onMouseLeave={onDragEnd}
+        onMouseMove={onDragMove}
+        onMouseUp={onDragEnd}>
+        <Image alt="user image" containerClassName="w-52 h-36 rounded-8 flex-shrink-0" src="/images/baby_mock.png" />
+        <Image alt="user image" containerClassName="w-52 h-36 rounded-8 flex-shrink-0" src="/images/baby_mock.png" />
+      </div>
+      <div className="flex flex-col gap-8 text-grayscale-80 body-sm-15-regular">
+        <div className="rounded-14 bg-alert-memo-gradient p-4">
+          AI 가 생성한 요약 메모의 요약 내용, AI 가 생성한 요약 메모의 요약 내용, AI 가 생성한 요약 메모의 요약 내용, AI
+          가 생성한 요약 메모의 요약 내용
+        </div>
+        <div className="">
+          사용자가 입력한 메모 내용, 사용자가 입력한 메모 내용, 사용자가 입력한 메모 내용, 사용자가 입력한 메모 내용,
+          사용자가 입력한 메모 내용
         </div>
       </div>
-      <div className="mb-5 mt-3.5">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium ullam veritatis placeat maxime at nulla
-        laboriosam aperiam porro cum deleniti officia quidem odio quam pariatur reprehenderit illum eaque asperiores
-        libero, corporis quos alias? Error tempore architecto ab laudantium quaerat culpa, ut ex temporibus perferendis,
-        cumque, incidunt minima quasi porro quia!
-      </div>
-    </div>
+    </>
   );
 };
 
