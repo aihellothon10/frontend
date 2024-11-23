@@ -43,6 +43,6 @@ interface MemoChipsProps {
   onChange: (value: string) => void;
 }
 
-const items = ['아이1', '아이2', '병원', '약', '교육1', '교육2'];
+const items = ['아이1', '아이2', '엄마', '아빠', '할머니', '할아버지'];
 
 export default MemoChips;
