@@ -6,7 +6,7 @@ const FamilyBabies = () => (
   <div className="rounded-b-20 rounded-t-76 bg-grayscale-10 p-3">
     <div className="flex flex-col gap-16">
       {babies.map(baby => (
-        <FamilyBabyEllipse key={baby.name} {...baby} />
+        <FamilyBabyEllipse key={baby.babyId} {...baby} />
       ))}
       <div className="inline-flex justify-center">
         <Button className="bg-grayscale-20" fullWidth={false} size="sm" onClick={() => {}}>
@@ -19,8 +19,8 @@ const FamilyBabies = () => (
 );
 
 const babies = [
-  { name: '가나다', order: '첫째', age: '48개월', tall: '83cm', weight: '10.2kg' },
-  { name: '마바사', order: '둘째', age: '48개월', tall: '83cm', weight: '10.2kg' },
+  { name: '가나다', order: '첫째', age: '48개월', tall: '83cm', weight: '10.2kg', babyId: 1 },
+  { name: '마바사', order: '둘째', age: '48개월', tall: '83cm', weight: '10.2kg', babyId: 2 },
 ];
 
 export default FamilyBabies;
