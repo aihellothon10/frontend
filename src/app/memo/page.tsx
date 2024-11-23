@@ -35,7 +35,6 @@ const Memo = () => {
   };
 
   const handleCoreFilterChange = (newCoreFilters: CoreFilters) => {
-    console.log(newCoreFilters);
     setCoreFilters(newCoreFilters);
   };
 
