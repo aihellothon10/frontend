@@ -4,7 +4,10 @@ export const defaultTheme: Config['theme'] = {
   colors: {
     inherit: 'inherit',
     transparent: 'transparent',
-    dimmed: 'rgba(0, 0, 0, 0.2)',
+    dimmed: {
+      20: 'rgba(0, 0, 0, 0.2)',
+      50: 'rgba(0, 0, 0, 0.5)',
+    },
     white: '#ffffff',
     black: '#000000',
     grayscale: {

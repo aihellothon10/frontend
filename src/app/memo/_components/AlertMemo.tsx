@@ -1,6 +1,6 @@
 const AlertMemo = () => (
   <>
-    <div className="py-3.75 mt-3 cursor-pointer rounded-12 border-2 border-dimmed bg-alert-memo-gradient px-2.5 opacity-70">
+    <div className="border-dimmed-20 mt-3 cursor-pointer rounded-12 border-2 bg-alert-memo-gradient px-2.5 py-3.75 opacity-70">
       <div className="flex gap-8">
         <span className="icon-md">notifications</span>
         <div>
