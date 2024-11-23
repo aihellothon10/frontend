@@ -48,7 +48,8 @@ const Memo = () => {
           <CoreMemo filters={coreFilters} onChange={handleCoreFilterChange} />
           <MemoCards coreFilters={coreFilters} filters={[...filters]} />
         </div>
-        <FloatingActionButton onClick={handleAddMemoClick} />
+
+        <FloatingActionButton color="blue" onClick={handleAddMemoClick} />
       </div>
       <BottomNavigation />
     </>
