@@ -45,7 +45,7 @@ export const MEMOS = [
     liked: false,
   },
   {
-    memoId: 1,
+    memoId: 6,
     title: '제목6',
     tags: ['김엄마', '김아빠', '아이2'],
     date: '2024-11-23',
@@ -54,7 +54,7 @@ export const MEMOS = [
     liked: true,
   },
   {
-    memoId: 2,
+    memoId: 7,
     title: '제목7',
     tags: ['김엄마', '김아빠', '아이1'],
     date: '2024-11-23',
@@ -63,7 +63,7 @@ export const MEMOS = [
     liked: true,
   },
   {
-    memoId: 3,
+    memoId: 8,
     title: '제목8',
     tags: ['아이1', '아이2'],
     date: '2024-11-23',
@@ -72,7 +72,7 @@ export const MEMOS = [
     liked: true,
   },
   {
-    memoId: 4,
+    memoId: 9,
     title: '제목9',
     tags: ['김엄마', '김아빠', '아이1', '아이2'],
     date: '2024-11-23',
@@ -81,7 +81,7 @@ export const MEMOS = [
     liked: true,
   },
   {
-    memoId: 5,
+    memoId: 10,
     title: '제목10',
     tags: ['김아빠', '아이1', '아이2'],
     date: '2024-11-23',
@@ -90,7 +90,7 @@ export const MEMOS = [
     liked: true,
   },
   {
-    memoId: 1,
+    memoId: 11,
     title: '제목11',
     tags: ['김엄마', '김아빠', '아이1', '아이2'],
     date: '2024-11-23',
@@ -99,7 +99,7 @@ export const MEMOS = [
     liked: false,
   },
   {
-    memoId: 2,
+    memoId: 12,
     title: '제목12',
     tags: ['김엄마', '아이1', '아이2'],
     date: '2024-11-23',
@@ -108,7 +108,7 @@ export const MEMOS = [
     liked: true,
   },
   {
-    memoId: 3,
+    memoId: 13,
     title: '제목13',
     tags: ['김엄마', '김아빠', '아이2'],
     date: '2024-11-23',
@@ -117,7 +117,7 @@ export const MEMOS = [
     liked: true,
   },
   {
-    memoId: 4,
+    memoId: 14,
     title: '제목14',
     tags: ['김엄마', '김아빠', '아이1'],
     date: '2024-11-23',
