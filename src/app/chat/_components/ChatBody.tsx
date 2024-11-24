@@ -1,33 +1,76 @@
+import { Fragment } from 'react';
+
 import { cn } from 'dotori-utils';
 
 import { Image } from '@/app/_components/common';
 
+export interface ChatResponse {
+  q: string;
+  a: string;
+  status: string;
+  analyzeInput: {
+    images: string[];
+    query: string;
+    links: string[];
+  };
+  analyzeResult: {
+    assistantContent: string;
+    generatedTitle: string;
+    answer: string;
+    contentContainBoolean: 0;
+    contentContainBooleanExplain: string;
+    crawlingContents: string[];
+    toxicityTexts: string[];
+    toxicityPredictions: [
+      {
+        score: 0;
+        toxic: true;
+      },
+    ];
+    content: string;
+    citations: string[];
+    keyword: string;
+    searchResults: [
+      {
+        title: string;
+        link: string;
+        description: string;
+      },
+    ];
+  };
+}
+
 const ChatBody = ({ chats }: ChatBodyProps) => (
   <div className="flex flex-col gap-20 px-4">
-    {chats.map((chat, index) => (
-      <div key={index} className={chatContainerStyle({ isMyChat: true })}>
-        <div key={index} className={chatStyle({ isMyChat: true })}>
-          {chat}
+    {chats?.map(({ q, a}, index) => (
+      <Fragment key={index}>
+        <div className={chatContainerStyle({ isMyChat: true })}>
+          <div className={chatStyle({ isMyChat: true })}>{q}</div>
         </div>
-      </div>
-    ))}
-    {[
-      '아이가 열이 많이 나는 상황에서는 다음과 같은 조치를 취하는 것이 중요합니. 체온 측정. 직장 체온: 38°C 이상, 구강 체온: 37.5°C 이상, 겨드랑이 체온: 37.2°C 이상이면 열로 간주합니다.',
-    ].map((chat, index) => (
-      <div key={index} className={chatContainerStyle({ isMyChat: false })}>
-        <div>
-          <button className="rounded-max bg-grayscale-10 p-2" type="submit">
-            <Image alt="twinkle" className="" containerClassName="w-6 h-6" sizes="1.5rem" src="/images/twinkle2.svg" />
-          </button>
+        <div className={chatContainerStyle({ isMyChat: false })}>
+          <div>
+            <button className="rounded-max bg-grayscale-10 p-2" type="submit">
+              <Image
+                alt="twinkle"
+                className=""
+                containerClassName="w-6 h-6"
+                sizes="1.5rem"
+                src="/images/twinkle2.svg"
+              />
+            </button>
+          </div>
+          <div className={chatStyle({ isMyChat: false })}>{a}</div>
+          <div>
+            {citations}
+          </div>
         </div>
-        <div className={chatStyle({ isMyChat: false })}>{chat}</div>
-      </div>
+      </Fragment>
     ))}
   </div>
 );
 
 interface ChatBodyProps {
-  chats: string[];
+  chats?: ChatResponse[];
 }
 
 const chatContainerStyle = cn('flex max-w-[90%] gap-12', {

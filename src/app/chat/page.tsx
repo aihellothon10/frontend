@@ -1,13 +1,13 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import { useMutation, useQuery, QueryClient } from '@tanstack/react-query';
 import axios from 'axios';
 
 import { MUTATION_KEYS, QUERY_KEYS } from '../constants';
 
-import ChatBody from './_components/ChatBody';
+import ChatBody, { ChatResponse } from './_components/ChatBody';
 import ChatFooter from './_components/ChatFooter';
 import ChatHeader from './_components/ChatHeader';
 
@@ -33,16 +33,18 @@ const addChatMutationFn = async ({
   chatRoomId: number;
 }) => {
   const url = `${process.env.NEXT_PUBLIC_SAFE_CHILD_BASE_URL}/api/chats/${chatRoomId}/analyze`;
+  const data = links.length === 0 ? { text } : { text, links };
+
   await axios<{ chatRoomId: number }>({
     url,
-    data: { text, links },
+    data,
     method: 'POST',
   });
 };
 
 const getChats = async (chatRoomId: number) => {
   const url = `${process.env.NEXT_PUBLIC_SAFE_CHILD_BASE_URL}/api/chats/${chatRoomId}/jobs`;
-  const { data } = await axios<{ chatRoomId: number }>({
+  const { data } = await axios<ChatResponse[]>({
     url,
     method: 'GET',
   });
@@ -51,14 +53,17 @@ const getChats = async (chatRoomId: number) => {
 };
 
 const Chat = () => {
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
   const queryClient = new QueryClient();
   const [chatRoomId, setChatRoomId] = useState(0);
 
-  const { data: chats } = useQuery({
+  const { data: chats, refetch } = useQuery({
     queryKey: QUERY_KEYS.CHATS,
     queryFn: async () => getChats(chatRoomId),
     enabled: chatRoomId !== 0,
   });
+
+  console.log('chats', chats);
 
   const { mutate: chatRoomIdMutate } = useMutation({
     mutationKey: MUTATION_KEYS.CHAT_ROOM_ID,
@@ -74,23 +79,31 @@ const Chat = () => {
     onSuccess: async () => queryClient.invalidateQueries({ queryKey: QUERY_KEYS.CHATS }),
   });
 
-  console.log(chatRoomId);
-
-  console.log(chats);
-
-  const addChat = (value: string) => {
-    addChatMutate({ text: value, links: [], chatRoomId });
+  const addChat = (value: { text: string; links: string[] }) => {
+    addChatMutate({ ...value, chatRoomId });
   };
 
   useEffect(() => {
     chatRoomIdMutate();
+
+    try {
+      timerRef.current = setInterval(async () => {
+        await refetch();
+      }, 2000);
+    } catch (err) {
+      console.log(err);
+    }
+
+    return () => {
+      if (timerRef.current) clearInterval(timerRef.current);
+    };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
     <div className="flex-1 bg-grayscale-20">
       <ChatHeader />
-      {/* <ChatBody chats={chats} /> */}
+      <ChatBody chats={chats} />
       <ChatFooter addChat={addChat} />
     </div>
   );

@@ -42,7 +42,8 @@ const ChatInput = ({ addChat }: ChatInputProps) => {
   const handleSubmit: React.FormEventHandler<HTMLFormElement> = e => {
     e.preventDefault();
     handleValueChange('');
-    addChat(value);
+    addChat(form);
+    setForm({ text: '', links: [] });
   };
 
   return (
@@ -142,7 +143,7 @@ const ChatInput = ({ addChat }: ChatInputProps) => {
 };
 
 interface ChatInputProps {
-  addChat: (value: string) => void;
+  addChat: (value: { text: string; links: string[] }) => void;
 }
 const actionButtonStyle = cn('mr-1.5 rounded-max bg-grayscale-20 p-2 text-grayscale-50 icon-md transition-all', {
   variants: {

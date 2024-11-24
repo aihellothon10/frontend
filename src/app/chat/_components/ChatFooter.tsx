@@ -12,7 +12,7 @@ const ChatFooter = ({ addChat }: ChatFooterProps) => (
 );
 
 interface ChatFooterProps {
-  addChat: (value: string) => void;
+  addChat: (value: { text: string; links: string[] }) => void;
 }
 
 export default ChatFooter;
