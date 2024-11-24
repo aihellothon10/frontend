@@ -8,7 +8,5 @@ export const adjustTextareaHeight = <T extends HTMLElement>(element: T | null, r
   const lineHeight = parseInt(getComputedStyle(textarea).lineHeight, 10);
   const maxHeight = lineHeight * rows;
 
-  console.log(Math.min(textarea.scrollHeight, maxHeight));
-
   textarea.style.height = `${Math.min(textarea.scrollHeight, maxHeight)}px`;
 };

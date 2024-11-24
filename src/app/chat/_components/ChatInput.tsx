@@ -12,14 +12,13 @@ const ChatInput = ({ addChat }: ChatInputProps) => {
     text: '',
     links: [],
   });
-  const [value, setValue] = useState('');
   const [link, setLink] = useState('');
   const { isOpen, close, toggle } = useDisClosure();
   const formRef = useOutSideClick<HTMLFormElement>(close);
   const { isOpen: modalIsOpen, open: modalOpen, close: modalClose } = useDisClosure();
   const { containerRef, onDragStart, onDragMove, onDragEnd } = useHorizontalScroll();
 
-  const handleValueChange = (newValue: string) => setValue(newValue);
+  const handleValueChange = (newValue: string) => setForm({ ...form, text: newValue });
 
   const addLink = () => {
     setLink('');
@@ -91,7 +90,7 @@ const ChatInput = ({ addChat }: ChatInputProps) => {
               className="p-0"
               maxRows={2}
               placeholder="아이가 열이 많이 나요"
-              value={value}
+              value={form.text}
               leftIcon={
                 <button className={actionButtonStyle({ isOpen })} onClick={toggle}>
                   add
