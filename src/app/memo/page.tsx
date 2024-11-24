@@ -2,19 +2,30 @@
 
 import { useState } from 'react';
 
+// import { useQuery } from '@tanstack/react-query';
+// import axios from 'axios';
 import { useRouter } from 'next/navigation';
 
 import { BottomNavigation, FloatingActionButton } from '@/app/_components/common';
 import { PATH } from '@/app/constants';
 import { useMemoStepStore } from '@/app/store';
 
-import { MemoCards, MemoHeader, MemoInput } from './_components';
-import CoreMemo from './_components/CoreMemo';
+import { MemoCards, MemoHeader, MemoInput, CoreMemo } from './_components';
 import MemoChips from './_components/MemoChips/MemoChips';
 
+// const queryFn = async () => {
+//   const url = `${process.env.NEXT_PUBLIC_SAFE_CHILD_BASE_URL}/api/memos`;
+//   const { data } = await axios({
+//     url,
+//     method: 'GET',
+//   });
+//   console.log(data);
+//   return data;
+// };
+
 const Memo = () => {
+  // const { data } = useQuery({ queryKey: QUERY_KEYS.MEMOS, queryFn });
   const [filters, setFilters] = useState<Set<string>>(new Set());
-  const [coreFilters, setCoreFilters] = useState(defaultCoreFilters);
   const router = useRouter();
   const { resetStep } = useMemoStepStore();
 
@@ -34,10 +45,6 @@ const Memo = () => {
     });
   };
 
-  const handleCoreFilterChange = (newCoreFilters: CoreFilters) => {
-    setCoreFilters(newCoreFilters);
-  };
-
   return (
     <>
       <MemoHeader />
@@ -45,10 +52,9 @@ const Memo = () => {
         <MemoInput />
         <MemoChips onChange={handleFilterChange} />
         <div className="mt-4 rounded-20 bg-grayscale-10 p-3">
-          <CoreMemo filters={coreFilters} onChange={handleCoreFilterChange} />
-          <MemoCards coreFilters={coreFilters} filters={[...filters]} />
+          <CoreMemo />
+          <MemoCards filters={[...filters]} />
         </div>
-
         <FloatingActionButton color="blue" onClick={handleAddMemoClick} />
       </div>
       <BottomNavigation />

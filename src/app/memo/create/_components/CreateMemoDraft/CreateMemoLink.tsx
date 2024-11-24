@@ -15,7 +15,7 @@ const CreateMemoLink = () => {
   const handleRemoveLinkValue = (index: number) => setLinkValues(linkValues.filter((_, idx) => idx !== index));
 
   return (
-    <CreateMemoSection title="링크" help>
+    <CreateMemoSection title="내용을 분석할 링크" help>
       {linkValues.map((linkValue, index) => (
         <Textarea
           key={index}

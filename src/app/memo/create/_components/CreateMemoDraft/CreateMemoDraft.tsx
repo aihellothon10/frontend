@@ -7,10 +7,10 @@ import CreateMemoUpload from './CreateMemoUpload';
 const CreateMemoDraft = ({ onChange }: CreateMemoDraftProps) => (
   <>
     <div className="flex flex-col gap-24 px-4 py-3">
-      <CreateMemoSwitch />
+      {/* <CreateMemoSwitch /> */}
       <CreateMemoTextarea />
       <CreateMemoLink />
-      <CreateMemoUpload />
+      {/* <CreateMemoUpload /> */}
     </div>
     <CreateMemoBottomButton onChange={onChange} />
   </>

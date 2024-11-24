@@ -5,4 +5,5 @@ export const PATH = {
   FAMILY: '/family',
   FAMILY_BABY: '/family/baby',
   ME: '/me',
+  CHAT: '/chat',
 };

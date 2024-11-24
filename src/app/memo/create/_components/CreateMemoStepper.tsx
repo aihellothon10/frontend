@@ -13,14 +13,14 @@ const CreateMemoStepper = () => {
       {steps.map(({ label, step }) => (
         <button key={step} className="flex flex-1 flex-col justify-center gap-8" onClick={() => updateStep(step)}>
           <div className={stepBoxStyle({ current: step <= currentStep })}>
-            <Chip
+            {/* <Chip
               className="cursor-pointer"
               color={step <= currentStep ? 'blue' : 'gray'}
               size="sm"
               type="solid"
               variant="outline">
               {step}단계
-            </Chip>
+            </Chip> */}
             <span className={stepLabelStyle({ current: step <= currentStep })}>{label}</span>
           </div>
           <Divider className={stepDividerStyle({ current: step <= currentStep })} />
@@ -31,8 +31,9 @@ const CreateMemoStepper = () => {
 };
 
 const steps = [
-  { label: '초안 작성', step: 1 },
+  { label: '내용 작성', step: 1 },
   { label: '메모 설정', step: 2 },
+  { label: '분석 결과', step: 3 },
 ];
 
 const stepBoxStyle = cn('gap-4 inline-flex w-full items-center justify-center', {

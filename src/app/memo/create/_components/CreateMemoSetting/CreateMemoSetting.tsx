@@ -1,9 +1,9 @@
 import { MemoWarningCard } from '@/app/memo/_components';
 
 import CreateMemoBottomButtons from './CreateMemoBottomButtons';
-import CreateMemoConnection from './CreateMemoConnection';
+// import CreateMemoConnection from './CreateMemoConnection';
 import CreateMemoNote from './CreateMemoNote';
-import CreateMemoRedirectFamily from './CreateMemoRedirectFamily';
+// import CreateMemoRedirectFamily from './CreateMemoRedirectFamily';
 import CreateMemoTitle from './CreateMemoTitle';
 
 const CreateMemoSetting = () => (
@@ -15,8 +15,8 @@ const CreateMemoSetting = () => (
       </MemoWarningCard>
       <CreateMemoTitle />
       <CreateMemoNote />
-      <CreateMemoConnection />
-      <CreateMemoRedirectFamily />
+      {/* <CreateMemoConnection />
+      <CreateMemoRedirectFamily /> */}
     </div>
     <CreateMemoBottomButtons />
   </>

@@ -68,6 +68,7 @@ export const defaultTheme: Config['theme'] = {
     24: '24px',
   },
   borderRadius: {
+    none: 'none',
     4: '4px',
     8: '8px',
     12: '12px',

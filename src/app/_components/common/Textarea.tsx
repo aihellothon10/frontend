@@ -7,7 +7,16 @@ import { cn } from 'dotori-utils';
 import { KEYBOARD } from '@/app/constants';
 import { adjustTextareaHeight } from '@/app/utils';
 
-const Textarea = ({ value, onChange, placeholder, minRows = 1, maxRows, icon, className }: TextareaProps) => {
+const Textarea = ({
+  value,
+  onChange,
+  placeholder,
+  minRows = 1,
+  maxRows,
+  leftIcon,
+  rightIcon,
+  className,
+}: TextareaProps) => {
   const textareaRef = useRef<HTMLTextAreaElement | null>(null);
 
   const handleKeyDown: React.KeyboardEventHandler<HTMLTextAreaElement> = e => {
@@ -24,16 +33,17 @@ const Textarea = ({ value, onChange, placeholder, minRows = 1, maxRows, icon, cl
 
   return (
     <div className={textareaContainerStyle({ className })}>
+      {leftIcon}
       <textarea
         ref={textareaRef}
-        className="w-full resize-none rounded-14 py-3 text-grayscale-80"
+        className="w-full resize-none py-3 text-grayscale-80"
         placeholder={placeholder}
         rows={minRows}
         value={value}
         onChange={handleChange}
         onKeyDown={handleKeyDown}
       />
-      {icon}
+      {rightIcon}
     </div>
   );
 };
@@ -46,7 +56,8 @@ interface TextareaProps {
   minRows?: number;
   search?: boolean;
   className?: string;
-  icon?: React.ReactNode;
+  leftIcon?: React.ReactNode;
+  rightIcon?: React.ReactNode;
 }
 
 const textareaContainerStyle = cn('inline-flex w-full items-center gap-6 rounded-14 px-4 text-grayscale-80');

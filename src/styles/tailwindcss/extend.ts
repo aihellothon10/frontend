@@ -9,6 +9,7 @@ export const extend: Config['theme'] = {
     'alert-memo-gradient': 'linear-gradient(90deg, #B1E6E4 0%, #C7DFF6 33.33%, #E4E0F8 66.67%, #EDDEF8 100%)',
     'create-memo-gradient':
       'radial-gradient(143.26% 108.12% at -27.09% 21.92%, #1AFFB6 0%, #1A66FF 63.99%, #BD62FF 100%)',
+    'chat-border-gradient': 'radial-gradient(125.74% 175% at 51.14% -36.36%, #1AFFB6 0%, #1A66FF 50%, #BD62FF 86.32%)',
   },
   width: {
     mobile: '375px',

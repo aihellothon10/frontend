@@ -2,8 +2,9 @@ import { useRouter } from 'next/navigation';
 
 import { Image } from '@/app/_components/common';
 import { PATH } from '@/app/constants';
+import { MEMOS } from '@/app/constants/memos';
 
-const MemoCard = ({ isError, liked }: MemoCardProps) => {
+const MemoCard = ({ isError, liked }: (typeof MEMOS)[number]) => {
   const router = useRouter();
 
   const handleMemoCardClick = () => router.push(`${PATH.MEMO}/1`);
@@ -45,10 +46,5 @@ const MemoCard = ({ isError, liked }: MemoCardProps) => {
     </button>
   );
 };
-
-interface MemoCardProps {
-  isError: boolean;
-  liked: boolean;
-}
 
 export default MemoCard;
