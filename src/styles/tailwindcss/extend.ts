@@ -12,7 +12,7 @@ export const extend: Config['theme'] = {
     'chat-border-gradient': 'radial-gradient(125.74% 175% at 51.14% -36.36%, #1AFFB6 0%, #1A66FF 50%, #BD62FF 86.32%)',
   },
   width: {
-    mobile: '375px',
+    mobile: '480px',
     12.5: '3.125rem',
     13: '3.25rem',
     15: '3.75rem',
