@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { cn } from 'dotori-utils';
 
 import { Button, Image, Modal, Textarea } from '@/app/_components/common';
-import { useDisClosure, useOutSideClick } from '@/app/hooks/common';
+import { useDisClosure, useHorizontalScroll, useOutSideClick } from '@/app/hooks/common';
 
 const ChatInput = ({ addChat }: ChatInputProps) => {
   const [form, setForm] = useState<{ text: string; links: string[] }>({
@@ -15,8 +15,9 @@ const ChatInput = ({ addChat }: ChatInputProps) => {
   const [value, setValue] = useState('');
   const [link, setLink] = useState('');
   const { isOpen, close, toggle } = useDisClosure();
-  const containerRef = useOutSideClick<HTMLFormElement>(close);
+  const formRef = useOutSideClick<HTMLFormElement>(close);
   const { isOpen: modalIsOpen, open: modalOpen, close: modalClose } = useDisClosure();
+  const { containerRef, onDragStart, onDragMove, onDragEnd } = useHorizontalScroll();
 
   const handleValueChange = (newValue: string) => setValue(newValue);
 
@@ -29,7 +30,9 @@ const ChatInput = ({ addChat }: ChatInputProps) => {
     modalClose();
     setLink('');
   };
-  const deleteLink = (index: number) => {};
+  const deleteLink = (targetDeletedLink: string) => {
+    setForm({ ...form, links: form.links.filter(_link => _link !== targetDeletedLink) });
+  };
 
   const handleModalOpen = () => {
     close();
@@ -44,7 +47,7 @@ const ChatInput = ({ addChat }: ChatInputProps) => {
 
   return (
     <>
-      <form ref={containerRef} className="flex flex-col gap-12" onSubmit={handleSubmit}>
+      <form ref={formRef} className="flex flex-col gap-12" onSubmit={handleSubmit}>
         {isOpen && (
           <div className="grid grid-cols-2 gap-6">
             <Button className="rounded-12 py-3 text-grayscale-60 body-sm-15-regular" onClick={handleModalOpen}>
@@ -60,6 +63,29 @@ const ChatInput = ({ addChat }: ChatInputProps) => {
 
         <div className="rounded-[22px] bg-chat-border-gradient p-[2px]">
           <div className="rounded-20 bg-grayscale-10 p-3">
+            {form.links.length > 0 && (
+              <div
+                ref={containerRef}
+                className="mb-2 flex gap-6 overflow-x-hidden text-nowrap"
+                role="button"
+                tabIndex={0}
+                onMouseDown={onDragStart}
+                onMouseLeave={onDragEnd}
+                onMouseMove={onDragMove}
+                onMouseUp={onDragEnd}>
+                {form.links.map(_link => (
+                  <div
+                    key={_link}
+                    className="inline-flex items-center gap-8 rounded-14 border border-grayscale-30 bg-grayscale-10 px-3 py-1.5 text-grayscale-60">
+                    <div className="line-clamp-1 underline">{_link}</div>
+                    <button className="text-grayscale-50 icon-sm" onClick={() => deleteLink(_link)}>
+                      close
+                    </button>
+                  </div>
+                ))}
+              </div>
+            )}
+
             <Textarea
               className="p-0"
               maxRows={2}
@@ -95,7 +121,7 @@ const ChatInput = ({ addChat }: ChatInputProps) => {
         </div>
 
         <Textarea
-          className="mb-4 bg-grayscale-20 py-2"
+          className="mb-4 bg-grayscale-20 p-3"
           maxRows={1}
           minRows={1}
           placeholder="링크를 입력해주세요."

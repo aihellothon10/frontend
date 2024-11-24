@@ -2,16 +2,16 @@
 
 import { cn } from 'dotori-utils';
 
-import { Chip, Divider } from '@/app/_components/common';
+import { Divider } from '@/app/_components/common';
 import { useMemoStepStore } from '@/app/store';
 
 const CreateMemoStepper = () => {
-  const { step: currentStep, updateStep } = useMemoStepStore();
+  const { step: currentStep } = useMemoStepStore();
 
   return (
     <div className="flex gap-8 px-5 pb-3">
       {steps.map(({ label, step }) => (
-        <button key={step} className="flex flex-1 flex-col justify-center gap-8" onClick={() => updateStep(step)}>
+        <button key={step} className="flex flex-1 flex-col justify-center gap-8" onClick={() => {}}>
           <div className={stepBoxStyle({ current: step <= currentStep })}>
             {/* <Chip
               className="cursor-pointer"

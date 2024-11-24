@@ -36,7 +36,7 @@ const Textarea = ({
       {leftIcon}
       <textarea
         ref={textareaRef}
-        className="w-full resize-none py-3 text-grayscale-80"
+        className="w-full resize-none text-grayscale-80"
         placeholder={placeholder}
         rows={minRows}
         value={value}
