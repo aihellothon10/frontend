@@ -13,7 +13,7 @@ const CreateMemoTextarea = () => {
   return (
     <CreateMemoSection title="메모 내용">
       <Textarea
-        className="bg-grayscale-20"
+        className="bg-grayscale-20 py-3"
         maxRows={9999}
         minRows={6}
         placeholder="메모 내용을 입력해주세요."

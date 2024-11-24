@@ -7,10 +7,10 @@ const MemoInput = () => {
 
   return (
     <Textarea
-      className="bg-grayscale-10"
-      icon={<span className="icon-sm text-grayscale-50">search</span>}
+      className="bg-grayscale-10 py-3"
       maxRows={2}
       placeholder="메모 검색"
+      rightIcon={<span className="text-grayscale-50 icon-sm">search</span>}
       value={state}
       onChange={setState}
     />

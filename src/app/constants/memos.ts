@@ -2,7 +2,7 @@ export const MEMOS = [
   {
     memoId: 1,
     title: '제목1',
-    tags: ['아이1', '아이2'],
+    tags: ['아이2'],
     date: '2024-11-23',
     isError: true,
     invisible: true,
@@ -11,7 +11,7 @@ export const MEMOS = [
   {
     memoId: 2,
     title: '제목2',
-    tags: ['김엄마', '김아빠', '아이1', '아이2'],
+    tags: ['엄마', '아빠', '아이2'],
     date: '2024-11-23',
     isError: true,
     invisible: true,
@@ -20,7 +20,7 @@ export const MEMOS = [
   {
     memoId: 3,
     title: '제목3',
-    tags: ['김아빠', '아이1', '아이2'],
+    tags: ['아빠', '아이2'],
     date: '2024-11-23',
     isError: true,
     invisible: true,
@@ -29,7 +29,7 @@ export const MEMOS = [
   {
     memoId: 4,
     title: '제목4',
-    tags: ['김엄마', '김아빠', '아이1', '아이2'],
+    tags: ['엄마', '아빠', '아이2'],
     date: '2024-11-23',
     isError: true,
     invisible: true,
@@ -38,7 +38,7 @@ export const MEMOS = [
   {
     memoId: 5,
     title: '제목5',
-    tags: ['김엄마', '아이1', '아이2'],
+    tags: ['엄마', '아이2'],
     date: '2024-11-23',
     isError: true,
     invisible: true,
@@ -47,7 +47,7 @@ export const MEMOS = [
   {
     memoId: 6,
     title: '제목6',
-    tags: ['김엄마', '김아빠', '아이2'],
+    tags: ['엄마', '아빠', '아이2'],
     date: '2024-11-23',
     isError: true,
     invisible: true,
@@ -56,7 +56,7 @@ export const MEMOS = [
   {
     memoId: 7,
     title: '제목7',
-    tags: ['김엄마', '김아빠', '아이1'],
+    tags: ['엄마', '아빠'],
     date: '2024-11-23',
     isError: true,
     invisible: true,
@@ -65,7 +65,7 @@ export const MEMOS = [
   {
     memoId: 8,
     title: '제목8',
-    tags: ['아이1', '아이2'],
+    tags: ['아이2'],
     date: '2024-11-23',
     isError: true,
     invisible: true,
@@ -74,7 +74,7 @@ export const MEMOS = [
   {
     memoId: 9,
     title: '제목9',
-    tags: ['김엄마', '김아빠', '아이1', '아이2'],
+    tags: ['엄마', '할머니', '아이1', '아이2'],
     date: '2024-11-23',
     isError: false,
     invisible: false,
@@ -83,7 +83,7 @@ export const MEMOS = [
   {
     memoId: 10,
     title: '제목10',
-    tags: ['김아빠', '아이1', '아이2'],
+    tags: ['아빠', '할머니', '아이2'],
     date: '2024-11-23',
     isError: false,
     invisible: false,
@@ -92,7 +92,7 @@ export const MEMOS = [
   {
     memoId: 11,
     title: '제목11',
-    tags: ['김엄마', '김아빠', '아이1', '아이2'],
+    tags: ['엄마', '아빠', '아이1', '할아버지'],
     date: '2024-11-23',
     isError: false,
     invisible: false,
@@ -101,7 +101,7 @@ export const MEMOS = [
   {
     memoId: 12,
     title: '제목12',
-    tags: ['김엄마', '아이1', '아이2'],
+    tags: ['엄마', '아이1', '할아버지'],
     date: '2024-11-23',
     isError: false,
     invisible: false,
@@ -110,7 +110,7 @@ export const MEMOS = [
   {
     memoId: 13,
     title: '제목13',
-    tags: ['김엄마', '김아빠', '아이2'],
+    tags: ['엄마', '아빠', '할아버지'],
     date: '2024-11-23',
     isError: false,
     invisible: false,
@@ -119,7 +119,7 @@ export const MEMOS = [
   {
     memoId: 14,
     title: '제목14',
-    tags: ['김엄마', '김아빠', '아이1'],
+    tags: ['할아버지', '아빠', '아이1'],
     date: '2024-11-23',
     isError: false,
     invisible: false,

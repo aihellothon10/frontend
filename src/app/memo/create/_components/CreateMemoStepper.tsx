@@ -6,7 +6,7 @@ import { Divider } from '@/app/_components/common';
 import { useMemoStepStore } from '@/app/store';
 
 const CreateMemoStepper = () => {
-  const { step: currentStep } = useMemoStepStore();
+  const { step: currentStep, updateStep } = useMemoStepStore();
 
   return (
     <div className="flex gap-8 px-5 pb-3">

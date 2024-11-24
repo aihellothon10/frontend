@@ -15,7 +15,7 @@ const CreateMemoTitle = () => {
   return (
     <CreateMemoSection title="생성된 제목">
       <Textarea
-        className="bg-grayscale-20 bg-alert-memo-gradient body-sm-15-regular"
+        className="bg-grayscale-20 bg-alert-memo-gradient py-3 body-sm-15-regular"
         maxRows={5}
         value={title}
         onChange={handleTitleChange}
