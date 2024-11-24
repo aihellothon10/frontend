@@ -91,16 +91,23 @@ const ChatBody = ({ chats }: ChatBodyProps) => {
               onMouseMove={onDragMove1}
               onMouseUp={onDragEnd1}>
               <div className="flex items-center gap-6">
-                <div className="text-violet-50">전문자료</div>
                 {citations
-                  .filter(citation => DOCS.some(docs => citation.includes(docs.url)))
-                  .map(citation => (
-                    <div
-                      key={citation}
-                      className="inline-flex items-center gap-8 rounded-14 border border-grayscale-30 bg-grayscale-10 px-3 py-1.5 text-grayscale-60">
-                      <div className="line-clamp-1 underline">{citation}</div>
-                    </div>
-                  ))}
+                  .filter(citation => citation)
+                  .filter(citation => DOCS.some(docs => citation.includes(docs.url))).length > 0 && (
+                  <>
+                    <div className="text-violet-50">전문자료</div>
+                    {citations
+                      .filter(citation => citation)
+                      .filter(citation => DOCS.some(docs => citation.includes(docs.url)))
+                      .map(citation => (
+                        <div
+                          key={citation}
+                          className="inline-flex items-center gap-8 rounded-14 border border-grayscale-30 bg-grayscale-10 px-3 py-1.5 text-grayscale-60">
+                          <div className="line-clamp-1 underline">{citation}</div>
+                        </div>
+                      ))}
+                  </>
+                )}
               </div>
             </div>
             <div
@@ -113,16 +120,23 @@ const ChatBody = ({ chats }: ChatBodyProps) => {
               onMouseMove={onDragMove2}
               onMouseUp={onDragEnd2}>
               <div className="flex items-center gap-6">
-                <div>일반출처</div>
                 {citations
-                  .filter(citation => DOCS.some(docs => citation.includes(docs.url)))
-                  .map(citation => (
-                    <div
-                      key={citation}
-                      className="inline-flex items-center gap-8 rounded-14 border border-grayscale-30 bg-grayscale-10 px-3 py-1.5 text-grayscale-60">
-                      <div className="line-clamp-1 underline">{citation}</div>
-                    </div>
-                  ))}
+                  .filter(citation => citation)
+                  .filter(citation => !DOCS.some(docs => citation.includes(docs.url))).length > 0 && (
+                  <>
+                    <div>일반출처</div>
+                    {citations
+                      .filter(citation => citation)
+                      .filter(citation => !DOCS.some(docs => citation.includes(docs.url)))
+                      .map(citation => (
+                        <div
+                          key={citation}
+                          className="inline-flex items-center gap-8 rounded-14 border border-grayscale-30 bg-grayscale-10 px-3 py-1.5 text-grayscale-60">
+                          <div className="line-clamp-1 underline">{citation}</div>
+                        </div>
+                      ))}
+                  </>
+                )}
               </div>
             </div>
           </div>
